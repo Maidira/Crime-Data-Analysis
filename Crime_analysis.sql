@@ -24,14 +24,6 @@ ORDER BY Total_Incidents DESC
 LIMIT 5;
 
 
-
-
-SELECT 
-    COLUMN_NAME, DATA_TYPE
-FROM INFORMATION_SCHEMA.COLUMNS
-WHERE TABLE_NAME = 'crime_data' AND COLUMN_NAME = 'DATE OCC';
-
-
 -- Crimes trend over time
 SELECT 
     YEAR(STR_TO_DATE(`DATE OCC`, '%m/%d/%Y %r')) AS Year,
